@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="444.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="departement.FXMLdispController">
+   <children>
+      <VBox fx:id="vbox" layoutX="18.0" layoutY="38.0" prefHeight="157.0" prefWidth="243.0" spacing="20.0" />
+      <JFXTextArea fx:id="descrtxt" focusColor="#00aa8d" layoutX="18.0" layoutY="222.0" prefHeight="48.0" prefWidth="243.0" promptText="Description" />
+      <JFXTextArea fx:id="instrtxt" focusColor="#00aa8d" layoutX="18.0" layoutY="291.0" prefHeight="48.0" prefWidth="243.0" promptText="Instruction" />
+      <Separator layoutX="47.0" layoutY="367.0" prefWidth="200.0" />
+      <JFXButton fx:id="savebtn" layoutX="110.0" layoutY="389.0" onAction="#save" ripplerFill="#00aa8d" text="Enregistrer" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="aukhemi7.jnlp">
+  <information>
+    <title>aukhemi7</title>
+    <vendor>kasmi</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="aukhemi7.jar" size="1693658" download="eager" />
+    <jar href="lib\controlsfx-8.40.12.jar" size="996389" download="eager" />
+    <jar href="lib\controlsfx-samples-8.40.12.jar" size="665038" download="eager" />
+    <jar href="lib\fxsampler-1.0.9.jar" size="30952" download="eager" />
+    <jar href="lib\javax.jar" size="770958" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2365385" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.42-bin.jar" size="996444" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="aukhemi7" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="aukhemi7.Aukhemi7"  name="aukhemi7" />
+  <update check="always"/>
+</jnlp>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="departement.FXMLdepartementController">
+   <children>
+      <Pane prefHeight="197.0" prefWidth="800.0" style="-fx-background-color: #2980b9;">
+         <children>
+            <Label fx:id="label" layoutX="14.0" layoutY="61.0" prefHeight="45.0" prefWidth="687.0" text="Departement" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="deconnexionbtn" layoutX="695.0" layoutY="14.0" onAction="#deconnexion" ripplerFill="WHITE" text="Deconnexion" textFill="WHITE" />
+         </children>
+      </Pane>
+      <JFXButton fx:id="otbtn" layoutX="433.0" layoutY="249.0" onAction="#ot" prefHeight="38.0" prefWidth="226.0" ripplerFill="#0a5ed8" style="-fx-background-color: #263238;" text="Ordres Traitées" textFill="WHITE" />
+      <JFXButton fx:id="brbtn" layoutX="182.0" layoutY="249.0" onAction="#br" prefHeight="38.0" prefWidth="226.0" ripplerFill="#0a5ed8" style="-fx-background-color: #263238;" text="Ma boite de reception" textFill="WHITE" />
+   </children>
+</AnchorPane>

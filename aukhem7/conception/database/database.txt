@@ -1,0 +1,90 @@
+create table fiche_ordre_a (
+  N_ordre_A   int(11) not null auto_increment, 
+  Description varchar(255), 
+  Instruction varchar(255), 
+  `Date`      date, 
+  Ordre       int(11) not null, 
+  primary key (N_ordre_A));
+create table service (
+  Service_Id          int(11) not null auto_increment, 
+  Service_designation varchar(255), 
+  Departement_id      int(11) not null, 
+  primary key (Service_Id));
+create table fiche_ordre_s (
+  N_ordre_s   int(11) not null auto_increment, 
+  Reference   varchar(255), 
+  Objet       varchar(255), 
+  Description varchar(255), 
+  Destination int(11) not null, 
+  `Date`      date, 
+  Ordre       int(11) not null, 
+  Departement int(11) not null, 
+  Service     int(11) not null, 
+  primary key (N_ordre_s));
+create table chef_departement (
+  Chef_dep_id int(11) not null, 
+  Account     int(11) not null, 
+  primary key (Chef_dep_id));
+create table employee (
+  ID        int(11) not null auto_increment, 
+  Nom       varchar(255), 
+  Prenom    varchar(255), 
+  CIN       varchar(255), 
+  Email     varchar(255), 
+  Adresse   varchar(255), 
+  Telephone int(11) not null, 
+  primary key (ID));
+create table ordre (
+  Ordre_id  int(11) not null auto_increment, 
+  Objet     varchar(255), 
+  Reference varchar(255), 
+  organisme int(11), 
+  PJ        varchar(255), 
+  primary key (Ordre_id));
+create table account (
+  Account_id int(11) not null auto_increment, 
+  Login      varchar(255), 
+  Password   varchar(255), 
+  primary key (Account_id));
+create table organisme (
+  Source_id   int(11) not null auto_increment, 
+  Designation varchar(255), 
+  Adresse     varchar(255), 
+  primary key (Source_id));
+create table Departement (
+  Departement_id         int(11) not null auto_increment, 
+  Department_designation varchar(255), 
+  Chef_dep_id            int(11), 
+  primary key (Departement_id));
+create table fiche_ordre_a_Departement (
+  fiche_ordre_a  int(11) not null, 
+  Departement_id int(11) not null, 
+  primary key (fiche_ordre_a, 
+  Departement_id));
+create table personel (
+  Service_Id int(11) not null, 
+  Account    int(11) not null, 
+  ID         int(11) not null);
+create table fiche_ordre_a_service (
+  Service_Id int(11) not null, 
+  N_ordre_A  int(11) not null, 
+  primary key (Service_Id, 
+  N_ordre_A));
+alter table ordre add index FKordre308736 (organisme), add constraint FKordre308736 foreign key (organisme) references organisme (Source_id);
+alter table fiche_ordre_a add index FKfiche_ordr598729 (Ordre), add constraint FKfiche_ordr598729 foreign key (Ordre) references ordre (Ordre_id);
+alter table fiche_ordre_s add index FKfiche_ordr598747 (Ordre), add constraint FKfiche_ordr598747 foreign key (Ordre) references ordre (Ordre_id);
+alter table Departement add index FKDepartemen767246 (Chef_dep_id), add constraint FKDepartemen767246 foreign key (Chef_dep_id) references chef_departement (Chef_dep_id);
+alter table fiche_ordre_s add index FKfiche_ordr79767 (Departement), add constraint FKfiche_ordr79767 foreign key (Departement) references Departement (Departement_id);
+alter table fiche_ordre_s add index FKfiche_ordr263470 (Service), add constraint FKfiche_ordr263470 foreign key (Service) references service (Service_Id);
+alter table fiche_ordre_a_Departement add index FKfiche_ordr555974 (Departement_id), add constraint FKfiche_ordr555974 foreign key (Departement_id) references Departement (Departement_id);
+alter table fiche_ordre_a_Departement add index FKfiche_ordr277285 (fiche_ordre_a), add constraint FKfiche_ordr277285 foreign key (fiche_ordre_a) references fiche_ordre_a (N_ordre_A);
+alter table personel add index FKpersonel250103 (Service_Id), add constraint FKpersonel250103 foreign key (Service_Id) references service (Service_Id);
+alter table chef_departement add index FKchef_depar977115 (Account), add constraint FKchef_depar977115 foreign key (Account) references account (Account_id);
+alter table personel add index FKpersonel312690 (Account), add constraint FKpersonel312690 foreign key (Account) references account (Account_id);
+alter table service add index FKservice978485 (Departement_id), add constraint FKservice978485 foreign key (Departement_id) references Departement (Departement_id);
+alter table personel add index FKpersonel640260 (ID), add constraint FKpersonel640260 foreign key (ID) references employee (ID);
+alter table chef_departement add index FKchef_depar49 (Chef_dep_id), add constraint FKchef_depar49 foreign key (Chef_dep_id) references employee (ID);
+alter table fiche_ordre_s add index FKfiche_ordr506337 (Destination), add constraint FKfiche_ordr506337 foreign key (Destination) references organisme (Source_id);
+alter table fiche_ordre_a_service add index FKfiche_ordr210178 (Service_Id), add constraint FKfiche_ordr210178 foreign key (Service_Id) references service (Service_Id);
+alter table fiche_ordre_a_service add index FKfiche_ordr150714 (N_ordre_A), add constraint FKfiche_ordr150714 foreign key (N_ordre_A) references fiche_ordre_a (N_ordre_A);
+

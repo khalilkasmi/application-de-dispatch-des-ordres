@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="departement.FXMLotController">
+   <children>
+      <JFXListView fx:id="table" layoutY="69.0" prefHeight="400.0" prefWidth="800.0" stylesheets="@../src/main.css" />
+      <JFXButton fx:id="retourbtn" layoutX="709.0" layoutY="34.0" onAction="#retour" ripplerFill="WHITE" style="-fx-background-color: #e67e22;" text="Retour" />
+      <Label layoutX="24.0" layoutY="24.0" text="Ordre Traité">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <StackPane fx:id="st" layoutX="364.0" layoutY="29.0" prefHeight="36.0" prefWidth="72.0" />
+      <Label layoutX="455.0" layoutY="38.0" text="Double click sur l'ordre pour valider" />
+   </children>
+</AnchorPane>

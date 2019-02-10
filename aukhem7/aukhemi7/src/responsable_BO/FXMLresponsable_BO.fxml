@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="responsable_BO.FXMLFXMLresponsable_BOController">
+   <children>
+      <Pane prefHeight="179.0" prefWidth="800.0" style="-fx-background-color: #00aa8d;">
+         <children>
+            <Label fx:id="lbl" layoutX="14.0" layoutY="61.0" prefHeight="47.0" prefWidth="570.0" text="bureau d'ordre" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Arial Bold" size="23.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="deconnexionbtn" layoutX="695.0" layoutY="14.0" onAction="#deconnexion" ripplerFill="WHITE" text="Deconnexion" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <JFXButton fx:id="nobtn" layoutX="43.0" layoutY="274.0" onAction="#no" prefHeight="40.0" prefWidth="200.0" ripplerFill="#00aa8d" style="-fx-background-color: #263238;" text="Nouvel Order" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="sobtn" layoutX="558.0" layoutY="274.0" onAction="#so" prefHeight="40.0" prefWidth="200.0" ripplerFill="#00aa8d" style="-fx-background-color: #263238;" text="Supprimer Order" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="brbtn" layoutX="298.0" layoutY="274.0" onAction="#br" prefHeight="40.0" prefWidth="200.0" ripplerFill="#00aa8d" style="-fx-background-color: #263238;" text="Boite de Reception" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="500.0" prefWidth="800.0" stylesheets="@../src/main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="responsable_BO.FXMLspoController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="299.0" text="Supprimer un ordre">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="retourbtn" layoutX="712.0" layoutY="24.0" onAction="#retour" ripplerFill="WHITE" style="-fx-background-color: #ffab00;" text="Retour" />
+      <JFXComboBox fx:id="combo" focusColor="#00aa8d" labelFloat="true" layoutX="233.0" layoutY="138.0" prefHeight="25.0" prefWidth="335.0" promptText="Reference" unFocusColor="#263238" />
+      <JFXButton fx:id="supbtn" layoutX="335.0" layoutY="238.0" onAction="#supprimer" prefHeight="25.0" prefWidth="131.0" ripplerFill="#00aa8d" style="-fx-background-color: #263238;" text="Supprimer" textFill="WHITE" />
+   </children>
+</AnchorPane>

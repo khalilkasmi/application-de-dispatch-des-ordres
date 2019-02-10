@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="400.0" prefWidth="313.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="infrmq.FXMLmenuController">
+   <children>
+      <JFXButton fx:id="savebtn" layoutX="107.0" layoutY="327.0" onAction="#save" prefHeight="25.0" prefWidth="90.0" ripplerFill="#00aa8d" text="Enregistrer" />
+      <Separator layoutX="52.0" layoutY="299.0" prefWidth="200.0" />
+      <JFXTextArea fx:id="decrtxt" focusColor="#00aa8d" labelFloat="true" layoutX="52.0" layoutY="185.0" prefHeight="85.0" prefWidth="209.0" promptText="Description" />
+      <DatePicker fx:id="datep" layoutX="52.0" layoutY="118.0" prefHeight="25.0" prefWidth="209.0" promptText="date" />
+      <JFXTextField fx:id="nostxt" focusColor="#00aa8d" labelFloat="true" layoutX="52.0" layoutY="49.0" prefHeight="25.0" prefWidth="209.0" promptText="Numero De Sortie" />
+   </children>
+</AnchorPane>

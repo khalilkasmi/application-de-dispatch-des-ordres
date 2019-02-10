@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import org.controlsfx.control.textfield.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="298.0" prefWidth="206.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teste.FXMLaddController">
+   <children>
+      <JFXTextField fx:id="inputone" labelFloat="true" layoutX="36.0" layoutY="73.0" promptText="input one" />
+      <JFXTextField fx:id="inputtwo" labelFloat="true" layoutX="36.0" layoutY="114.0" promptText="input two" />
+      <JFXCheckBox fx:id="chone" layoutX="36.0" layoutY="173.0" text="check one" />
+      <JFXCheckBox fx:id="chtwo" layoutX="36.0" layoutY="206.0" text="check two" />
+      <JFXButton fx:id="btnadd" buttonType="RAISED" layoutX="71.0" layoutY="252.0" onAction="#cli" prefHeight="25.0" prefWidth="56.0" ripplerFill="#33b58c" text="add" />
+      <Label fx:id="lbl" layoutX="36.0" layoutY="26.0" text="add new fiche" />
+   </children>
+</AnchorPane>

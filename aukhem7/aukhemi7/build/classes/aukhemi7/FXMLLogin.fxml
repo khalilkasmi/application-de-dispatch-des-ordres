@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="500.0" prefWidth="800.0" stylesheets="@../src/main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aukhemi7.FXMLLoginController">
+   <children>
+      <JFXTextField fx:id="utxt" focusColor="#00aa8d" labelFloat="true" layoutX="310.0" layoutY="163.0" prefHeight="25.0" prefWidth="246.0" promptText="username" unFocusColor="#233238">
+         <font>
+            <Font size="20.0" />
+         </font></JFXTextField>
+      <JFXPasswordField fx:id="ptxt" focusColor="#00aa8d" labelFloat="true" layoutX="310.0" layoutY="257.0" prefHeight="25.0" prefWidth="246.0" promptText="password" unFocusColor="#263238">
+         <font>
+            <Font size="20.0" />
+         </font></JFXPasswordField>
+      <JFXButton fx:id="loginbtn" layoutX="384.0" layoutY="346.0" onAction="#login" ripplerFill="#00aa8d" style="-fx-background-color: #233238;" text="Connexion" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></JFXButton>
+      <ImageView fx:id="img" fitHeight="122.0" fitWidth="208.0" layoutX="329.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../src/logo.png" />
+         </image>
+      </ImageView>
+      <JFXSnackbar fx:id="sn" layoutX="430.0" layoutY="480.0" prefHeight="20.0" prefWidth="500.0" style="-fx-background-color: #263238;" styleClass="jfx-snackbar-toast {-fx-text-fill :#white;}" stylesheets="@../src/main.css">
+         <effect>
+            <Shadow color="#3c3b3b" />
+         </effect></JFXSnackbar>
+   </children>
+</AnchorPane>
